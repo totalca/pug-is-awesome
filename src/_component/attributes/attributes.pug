@@ -4,4 +4,18 @@ block content
     class='modalTrigger',
     id='modalTrigger',
     href='#modalDialog1'
-   ) Open dialog
+   ) Show Attributes
+   
+  div(
+    class='modal',
+    id='modalDialog1',
+    tabindex='-1',
+    rolde='dialog'
+  )
+    div
+      a(
+        href='#modalTrigger',
+        class='modalBtn',
+        aria-label='Close'
+      ) &times;
+      p Hello!

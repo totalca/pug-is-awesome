@@ -1,0 +1,99 @@
+// styling to center the modal
+.modal {  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+
+p {
+  font-size: 1rem;
+  color: #ffffff;
+}
+}
+
+.modal > div {
+background: #06406c;
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100px;
+padding: 1em;
+position: fixed;
+top: 5%;
+width: 50%;
+}
+
+// modal fades in when focused.
+// note this is not a real-world solution
+.modal:target {
+opacity: 1;
+visibility: visible;
+}
+
+
+// Additional Styling
+
+// body {
+// font-family: monospace;
+// display: flex;
+// align-items: center;
+// justify-content: center;
+// min-height: 100vh;
+// }
+
+a.modalBtn {
+flex: 1;
+// background-color: #c69;
+border: none;
+padding: 0.5rem;
+max-width: 30%;
+top: 5%;
+right: 22%;
+position: fixed;
+color: white;
+transition-duration: .25s;
+text-align: center;
+text-decoration: none;
+font-size: 1.5rem;
+
+&:hover,
+&:focus {
+  background-color: #06406c;
+}
+}
+
+.close {
+background-color: transparent;
+position: absolute;
+top: .2em;
+right: .5em;
+font-size: 1.5em;
+cursor: pointer;
+text-decoration: none;
+
+&:hover,
+&:focus {
+  color: #c69
+  }
+}
+
+// Modal hidden until it matches an anchor target 
+// Note: you can't close it with the escape key 
+// or trap focus inside of it.
+.modal {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// modal fades in when it matches
+// an anchor link (i.e. clicked on)
+#modalDialog:target {
+  opacity: 1;
+  visibility: hidden;
+}
