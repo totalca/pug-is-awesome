@@ -1,5 +1,5 @@
 .open {  
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -13,7 +13,8 @@
 
 .open > div {
   background: #06406c;
-  display: flex;
+  display: block;
+  overflow: auto;
   align-items: center;
   justify-content: center;
   height: 25%;
@@ -31,7 +32,7 @@
 
 a.openButton {
   padding: 0.5rem;
-  position: fixed;
+  position: relative;
   color: white;
   background-color: #000000;
   border-radius: 10px;
@@ -62,4 +63,22 @@ a.openButton:focus {
 #openBox:target {
   opacity: 1;
   visibility: hidden;
+}
+
+
+#scrollbar {
+
+  &::-webkit-scrollbar {
+   width: 0.5em;
+   height: 0.5em;
+  }
+
+  &::-webkit-scrollbar-thumb {
+   background-color: rgba(255,255,255,.1);
+   border-radius: 3px;
+
+   &:hover {
+    background: rgba(255,255,255,.2);
+   }
+  }
 }

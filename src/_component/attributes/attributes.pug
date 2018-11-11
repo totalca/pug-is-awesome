@@ -12,10 +12,31 @@ block content
     tabindex='-1',
     rolde='dialog'
   )
-    div
+    div(
+      id='scrollbar'
+      )
       a(
         href='#',
         class='close',
         aria-label='Close'
       ) &times;
-      p Pug.js makes your life easier and is really awesome!
+      p <strong>Attributes</strong>
+      p a(href='google.com') Google
+      p a(class='button' href='google.com') Google
+      p a(class='button', href='google.com') Google
+      p <strong>Javascript</strong>
+      p - var authenticated = true
+      p body(class=authenticated ? 'authed' : 'anon')
+      p <strong>Multiline Attributes</strong>
+      p input(type='checkbox' name='agreement' checked)
+      p input(data-json=`{"very-long": "piece of ", "data": true}`)
+      p <strong>Quoted Attributes</strong>
+      p div(class='div-class', (click)='play()')
+      p div(class='div-class' '(click)'='play()')
+      p <strong>Boolean Attributes</strong>
+      p input(type='checkbox' checked)
+      p input(type='checkbox' checked=true)
+      p input(type='checkbox' checked=false)
+      p input(type='checkbox' checked=true.toString())
+      p <strong>Style Attributes</strong>
+      p a(style={color: 'red', background: 'green'})
