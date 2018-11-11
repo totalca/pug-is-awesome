@@ -1,0 +1,44 @@
+body {
+  font-family: 'roboto';
+  background-color: #348fd4;
+}
+
+a {
+  color: #ffffff;
+}
+
+p {
+  color: #ffffff;
+}
+
+header {
+  color: #ffffff;
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0 0 0 15px;
+  align-items: center; 
+  background-color: #06406c;
+}
+
+header p {
+  font-size: 1.5rem;
+}
+
+footer {
+  color: #ffffff;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0 0 0 15px;
+  align-items: center;
+  background-color: #06406c;
+}
+
+footer p {
+  font-size: 1.5rem;
+}
