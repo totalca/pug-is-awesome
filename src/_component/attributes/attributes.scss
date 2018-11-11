@@ -1,5 +1,4 @@
-// styling to center the modal
-.modal {  
+.open {  
   position: fixed;
   top: 0;
   left: 0;
@@ -12,83 +11,55 @@
   visibility: hidden;
 }
 
-.modal > div {
-background: #06406c;
-display: flex;
-align-items: center;
-justify-content: center;
-height: 100px;
-padding: 1em;
-position: fixed;
-top: 5%;
-width: 50%;
+.open > div {
+  background: #06406c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25%;
+  padding: 1rem;
+  position: absolute;
+  top: 30%;
+  width: 80%;
+  border-radius: 10px;
 }
 
-// modal fades in when focused.
-// note this is not a real-world solution
-.modal:target {
-opacity: 1;
-visibility: visible;
+.open:target {
+  opacity: 1;
+  visibility: visible;
 }
 
+a.openButton {
+  padding: 0.5rem;
+  position: fixed;
+  color: white;
+  background-color: #000000;
+  border-radius: 10px;
+  transition-duration: .25s;
+  text-decoration: none;
+  font-size: 1rem;
+}
 
-// Additional Styling
-
-// body {
-// font-family: monospace;
-// display: flex;
-// align-items: center;
-// justify-content: center;
-// min-height: 100vh;
-// }
-
-a.modalBtn {
-flex: 1;
-// background-color: #c69;
-border: none;
-padding: 0.5rem;
-max-width: 30%;
-top: 5%;
-right: 50%;
-position: fixed;
-color: white;
-transition-duration: .25s;
-text-align: center;
-text-decoration: none;
-font-size: 1.5rem;
-
-&:hover,
-&:focus {
+a.openButton:hover,
+a.openButton:focus {
   background-color: #06406c;
-}
 }
 
 .close {
-background-color: transparent;
-position: absolute;
-top: .2em;
-right: .5em;
-font-size: 1.5em;
-cursor: pointer;
-text-decoration: none;
-
-&:hover,
-&:focus {
-  color: #c69
-  }
+  position: absolute;
+  top: 0.2rem;
+  right: 0.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-// Modal hidden until it matches an anchor target 
-// Note: you can't close it with the escape key 
-// or trap focus inside of it.
-.modal {
+.open {
   opacity: 0;
   visibility: hidden;
 }
 
-// modal fades in when it matches
-// an anchor link (i.e. clicked on)
-#modalDialog:target {
+#openBox:target {
   opacity: 1;
   visibility: hidden;
 }

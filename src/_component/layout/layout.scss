@@ -1,5 +1,8 @@
 body {
   font-family: 'roboto';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   background-color: #348fd4;
 }
 
@@ -12,14 +15,8 @@ p {
 }
 
 header {
-  color: #ffffff;
-  display: flex;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  padding: 0 0 0 15px;
-  align-items: center; 
+  padding: 1px;
+  text-align: center;
   background-color: #06406c;
 }
 
@@ -27,15 +24,16 @@ header p {
   font-size: 1.5rem;
 }
 
+.container {
+  padding: 10px;
+}
+
 footer {
-  color: #ffffff;
-  display: flex;
-  position: fixed;
-  left: 0;
+  position: absolute;
+  right: 0;
   bottom: 0;
-  width: 100%;
-  padding: 0 0 0 15px;
-  align-items: center;
+  left: 0;
+  text-align: center;
   background-color: #06406c;
 }
 
